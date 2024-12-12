@@ -1,7 +1,12 @@
 body{
     background-image: url("Fondo.jpg") ;
     background-size: cover;
-    margin: 70px;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Para mantener el fondo fijo al hacer scroll */
+    margin: 0; /* Elimina los márgenes del body */
+    padding: 0;
+    font-family: "League Spartan", sans-serif;
+    color: white;
 }
 body::before {
     content: "";
@@ -13,33 +18,84 @@ body::before {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: -1;
 }
-h1{
-    font-family: League Spartan, sans-serif;
+h1, h2 {
     text-align: center;
-    font-size: 50px;
-    color: white;
+    font-weight: bold;
 }
-
-h2{
-    font-family: League Spartan, sans-serif;
-    text-align: left;
-    padding-top: 50px;
-    font-size: 30px;
-    color: white;
+h1 {
+    font-size: 3rem;
+    margin-top: 100px;
+}
+h2 {
+    font-size: 2rem;
+    margin: 20px 0;
     }
 
 
 .contenedor {
-    display: grid;
-    grid-template-columns: 1fr 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 50px;
     align-items: center;
-    padding: 20px;
-    gap:20px;
     
+}
+.contenedor img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar li {
+    display: inline;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: rgb(152, 171, 180);
+}
 
+
+/* Footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1000;
+}
+.footer p {
+    margin: 5px 0;
+    color: rgb(219, 182, 134);
+}
+.footer a {
+    text-decoration: none;
+    color: rgb(152, 171, 180);
+    font-weight: bold;
+}
 
 .contenedor2 {
     display: grid;
@@ -74,6 +130,7 @@ p{
     font-family: League Spartan, sans-serif;
     text-align: justify;
     font-size: 20px;
+    margin: 50px;
     color: rgb(219, 182, 134);
 
 }
@@ -81,4 +138,29 @@ a{
    font-size: 20px;
    color:rgb(152, 171, 180);
    font-family: League Spartan, sans-serif;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+    .contenedor2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 }
