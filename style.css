@@ -23,30 +23,65 @@ body::before {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: -1;
 }
+
+/* ---------------- TEXTO ------------------------------*/
 h1, h2 {
     text-align: center;
     font-weight: bold;
 }
 h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     margin-top: 100px;
 }
 h2 {
-    font-size: 2rem;
+    font-size: 50PX;
     margin: 20px 0;
+    margin-top: 100px;
     }
 
+p{
+    font-family: League Spartan, sans-serif;
+    text-align: justify;
+    font-size: 30px;
+    margin: 50px;
+    color: rgb(219, 182, 134);
 
-    .contenedor, .contenedor2 {
-        display: grid;
-        grid-template-columns: 1fr 300px;
-        gap: 20px;
-        align-items: center;
-        padding: 20px;
-    }
+}
+b{
+    color:bisque;
+    margin:0;
+}
+a{
+    font-size: 20px;
+    color:rgb(152, 171, 180);
+    font-family: League Spartan, sans-serif;
+}
+
+.texto{
+    flex:1;
+}
+
+a.enlaces{
+    color: #beaeeb; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 30px;
+}
+a.enlaces:hover{
+    color:rgb(243, 250, 148);
+    text-decoration: underline;
+
+}
+
+.contenedor, .contenedor2 {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
 
 
-/* Navbar */
+/* Navbar------------------------------------------------------ */
 .navbar {
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
@@ -80,7 +115,7 @@ h2 {
 }
 
 
-/* Footer */
+/* Footer----------------------------------------------------------- */
 .footer {
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
@@ -106,17 +141,13 @@ h2 {
     gap:20px;
     
 }
-.texto{
-    flex:1;
-}
 
-img{
+/* ---------------------- GÁFICOS --------------------------*/
+img.content{
     margin: 20px;
-    width: 300px;
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
-    
-    
 }
 
 .gif{
@@ -127,22 +158,18 @@ img{
     margin: 0 auto;
     
 }
-p{
-    font-family: League Spartan, sans-serif;
-    text-align: justify;
-    font-size: 20px;
-    margin: 50px;
-    color: rgb(219, 182, 134);
-
-}
-a{
-   font-size: 20px;
-   color:rgb(152, 171, 180);
-   font-family: League Spartan, sans-serif;
+img{
+    display: block; /* Necesario para que funcione margin auto */
+    margin: 0 auto; /* Centra horizontalmente */
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
 
 
-/* Responsive Design */
+
+
+/* Responsive Design------------------------------------------ */
 @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
